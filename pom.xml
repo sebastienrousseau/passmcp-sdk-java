@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-FileCopyrightText: 2026 Sebastien Rousseau <sebastian.rousseau@gmail.com> -->
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.satellion</groupId>
+  <artifactId>passmcp-sdk</artifactId>
+  <version>0.0.10</version>
+  <packaging>jar</packaging>
+
+  <name>passmcp-sdk</name>
+  <description>Apache-2.0 Java MCP client and server SDK with capability-gated 2026-07-28 conformance and offline passmcp attestation verification.</description>
+  <url>https://github.com/sebastienrousseau/passmcp-sdk-java</url>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>sebastienrousseau</id>
+      <name>Sebastien Rousseau</name>
+      <email>sebastian.rousseau@gmail.com</email>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:https://github.com/sebastienrousseau/passmcp-sdk-java.git</connection>
+    <developerConnection>scm:git:git@github.com:sebastienrousseau/passmcp-sdk-java.git</developerConnection>
+    <url>https://github.com/sebastienrousseau/passmcp-sdk-java</url>
+  </scm>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.release>21</maven.compiler.release>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
+        <configuration>
+          <release>21</release>
+          <compilerArgs>
+            <arg>-Xlint:all</arg>
+            <arg>-Werror</arg>
+          </compilerArgs>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.5.0</version>
+        <configuration>
+          <argLine>-ea</argLine>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
