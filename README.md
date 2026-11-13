@@ -14,7 +14,6 @@
   <a href="https://github.com/sebastienrousseau/passmcp-sdk-java"><img src="https://img.shields.io/badge/java-21%2B-ED8B00?style=for-the-badge" alt="Java 21+" /></a>
 </p>
 
-> **Status: Unreleased (`feat/v0.0.10`).** Registered in the `passmcp` family manifest ([ADR 0013](https://github.com/sebastienrousseau/passmcp/blob/main/docs/adr/0013-language-sdks-are-apache-satellites.md)) and joining the lockstep release stream at `v0.0.10`.
 
 ## Contents
 
@@ -38,8 +37,6 @@
 ---
 
 ## Install
-
-Once `v0.0.10` is tagged:
 
 ```sh
 mvn dependency:get -Dartifact=com.satellion:passmcp-sdk:0.0.10
@@ -79,7 +76,7 @@ if (!st.covers("http", "https://mcp.example.com/mcp")) {
 
 ## The passmcp-sdk-java ecosystem
 
-Every component is released at **0.0.9** and moves in lockstep: one version across the family, released together ([docs/ecosystem.md](https://github.com/sebastienrousseau/passmcp/blob/main/docs/ecosystem.md)).
+Every component is released at **0.0.10** and moves in lockstep: one version across the family, released together ([docs/ecosystem.md](https://github.com/sebastienrousseau/passmcp/blob/main/docs/ecosystem.md)).
 
 | Component | Purpose | Use case |
 | :--- | :--- | :--- |
@@ -105,14 +102,14 @@ Every component is released at **0.0.9** and moves in lockstep: one version acro
 
 | Area | Capability | Status |
 | :--- | :--- | :--- |
-| Protocol | JSON-RPC 2.0 `initialize`, `ping`, and stateless `server/discover` (`2025-06-18` through `2026-07-28`) | On `feat/v0.0.10` |
-| Capability gating | Derived `capabilities`; undeclared `tools/*`, `resources/*`, and `prompts/*` return `-32601` | On `feat/v0.0.10` |
-| Transports | Newline-delimited UTF-8 `stdio` (`StdioServer`, `StdioTransport`) and Streamable HTTP (`HttpProcessor`, `HttpTransport`) with `2026-07-28` mirrored headers (`-32020`) and `Mcp-Session-Id` lifecycle | On `feat/v0.0.10` |
-| OAuth 2.1 & PKCE | RFC 7636 `S256` PKCE, `WWW-Authenticate` Bearer challenges, RFC 9728 Protected Resource Metadata, and RFC 8414 Authorization Server Metadata validation | On `feat/v0.0.10` |
-| SEP-2164 | Missing `resources/read` returns `-32602` with `error.data.uri` on `2026-07-28` (`-32002` on earlier revisions) | On `feat/v0.0.10` |
-| SEP-2549 | `ttlMs` (`>= 0`) and `cacheScope` (`public` / `private`) validated and emitted on list responses | On `feat/v0.0.10` |
-| Origin & safety | Strict HTTP `Origin` allowlist check, JSON Schema input validation (`-32602`), and `readOnlyHint: true` default client execution policy | On `feat/v0.0.10` |
-| Attestation | Offline `in-toto` `Statement/v1` (`mcp-evaluation/v1`) SHA-256 / SHA-512 target-descriptor verifier | On `feat/v0.0.10` |
+| Protocol | JSON-RPC 2.0 `initialize`, `ping`, and stateless `server/discover` (`2025-06-18` through `2026-07-28`) | Released in `0.0.10` |
+| Capability gating | Derived `capabilities`; undeclared `tools/*`, `resources/*`, and `prompts/*` return `-32601` | Released in `0.0.10` |
+| Transports | Newline-delimited UTF-8 `stdio` (`StdioServer`, `StdioTransport`) and Streamable HTTP (`HttpProcessor`, `HttpTransport`) with `2026-07-28` mirrored headers (`-32020`) and `Mcp-Session-Id` lifecycle | Released in `0.0.10` |
+| OAuth 2.1 & PKCE | RFC 7636 `S256` PKCE, `WWW-Authenticate` Bearer challenges, RFC 9728 Protected Resource Metadata, and RFC 8414 Authorization Server Metadata validation | Released in `0.0.10` |
+| SEP-2164 | Missing `resources/read` returns `-32602` with `error.data.uri` on `2026-07-28` (`-32002` on earlier revisions) | Released in `0.0.10` |
+| SEP-2549 | `ttlMs` (`>= 0`) and `cacheScope` (`public` / `private`) validated and emitted on list responses | Released in `0.0.10` |
+| Origin & safety | Strict HTTP `Origin` allowlist check, JSON Schema input validation (`-32602`), and `readOnlyHint: true` default client execution policy | Released in `0.0.10` |
+| Attestation | Offline `in-toto` `Statement/v1` (`mcp-evaluation/v1`) SHA-256 / SHA-512 target-descriptor verifier | Released in `0.0.10` |
 
 ---
 
