@@ -14,6 +14,8 @@ release stream with its first signed tag.
 
 ## [Unreleased]
 
+## [0.0.10] - 2026-11-13
+
 ### Added
 
 - **Initial Java MCP client and server core (`com.satellion:passmcp-sdk`)** covering MCP
